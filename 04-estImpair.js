@@ -13,8 +13,21 @@
 function estImpair(n) {
   // Exercice non implémenté : vérifier si n est impair
   // Placeholder neutre : retourne null pour indiquer non-implémentation
-  return null;
+  if(isNaN(n) || typeof n !== 'number'){
+    return null 
+  }
+  if (n % 2 !== 0) {
+    return true
+  }else{
+    return false
+  }
 }
+
+console.log(estImpair('baba'))
+console.log(estImpair(3))
+console.log(estImpair(10))
+
+
 
 // Ne pas modifier la ligne ci-dessous
 module.exports = { estImpair };
