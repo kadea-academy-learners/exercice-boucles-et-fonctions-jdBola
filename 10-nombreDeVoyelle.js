@@ -11,8 +11,16 @@
 function nombreDeVoyelles(phrase) {
   // Exercice non implémenté : doit compter les voyelles
   // Placeholder neutre : retourne 0 pour indiquer non-implémentation
-  return 0;
+  const voyelles = ['a','e','i','o','u','y']
+  const trouvees = []
+  for(let char of phrase.toLowerCase()){
+    if(voyelles.includes(char) && !trouvees.includes(char)){
+      trouvees.push(char);
+    }
+  }
+  return trouvees;
 }
+console.log(nombreDeVoyelles('Bonjour famille'))
 
 // Ne pas modifier la ligne ci-dessous
 module.exports = { nombreDeVoyelles }
